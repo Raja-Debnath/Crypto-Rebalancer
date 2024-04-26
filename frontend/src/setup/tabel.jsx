@@ -1,37 +1,73 @@
-function Table({ data }) {
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+// import Button from "@mui/material/Button";
+import ButtonUsage from "./test";
+import DashNav from '../components/dashNav'
+function Table({}) {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/Cyrpto")
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log("cant get data from backend api | mongodb"), err;
+      });
+  }, []);
+
   return (
-    <div className="overflow-x-auto">
-    <Table {...args}>
-      <Table.Head>
-        <span />
-        <span>Name</span>
-        <span>Job</span>
-        <span>Favorite Color</span>
-      </Table.Head>
+    <>
+    <DashNav/>
+      <table className="w-full text-left text-sm text-gray-700 divide-y divide-gray-200">
+        <thead className="bg-gray-50">
+          <tr>
+            <th>Name</th>
+            <th>current_price</th>
+            <th>market_cap</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((data) => (
+            <tr>
+              <td>{data.name}</td>
+              <td>{data.current_price}</td>
+              <td>{data.market_cap}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
 
-      <Table.Body>
-        <Table.Row>
-          <span>1</span>
-          <span>Cy Ganderton</span>
-          <span>Quality Control Specialist</span>
-          <span>Blue</span>
-        </Table.Row>
+      <br />
+      <br />
+      <br />
+      <br />
 
-        <Table.Row>
-          <span>2</span>
-          <span>Hart Hagerty</span>
-          <span>Desktop Support Technician</span>
-          <span>Purple</span>
-        </Table.Row>
+      <table className="w-full text-left text-sm text-gray-700 divide-y divide-gray-200">
+        <thead className="bg-gray-50">
+          <tr>
+            <th>Name</th>
+            <th>current_price</th>
+            <th>market_cap</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((data) => (
+            <tr>
+              <td>{data.name}</td>
+              <td>{data.current_price}</td>
+              <td>{data.market_cap}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
 
-        <Table.Row>
-          <span>3</span>
-          <span>Brice Swyre</span>
-          <span>Tax Accountant</span>
-          <span>Red</span>
-        </Table.Row>
-      </Table.Body>
-    </Table>
-  </div>)}
+      <br />
+      <br />
+      <ButtonUsage />
+    </>
+  );
+}
 
-  export default Table;
+export default Table;

@@ -15,9 +15,11 @@ const getCoinPrices = async () => {
       };
     });
 
-    console.log(prices);
+    // console.log(typeof prices);
 
     return prices;
+
+    
   } catch (error) {
     console.error(error);
     throw error;

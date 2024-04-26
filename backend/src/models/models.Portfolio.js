@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
-const cryptoPriceSchema = new mongoose.Schema({
-  coin: {
+
+const CryptoSchema = new mongoose.Schema({
+  name: {
     type: String,
     required: true,
-    enum: ['bitcoin', 'chainlink', 'ethereum', 'polkadot', 'solana', 'tether'],
   },
   current_price: {
     type: Number,
@@ -20,4 +20,6 @@ const cryptoPriceSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('CryptoPrice', cryptoPriceSchema);
+const CryptoPrice = mongoose.model('Crypto', CryptoSchema);
+
+ export default CryptoPrice;

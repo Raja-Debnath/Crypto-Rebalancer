@@ -8,6 +8,7 @@
 
 // export default MyHomePage;
 
+import Button from "@mui/material/Button";
 
 
 import React from 'react'
@@ -20,17 +21,15 @@ const menuItems = [
     href: '/',
   },
   {
-    name: 'About',
-    href: '/portfolio',
+    name: 'Dashboard',
+    href: '/dashboard',
   },
+  
+  
   {
-    name: 'Tabel',
+    name: 'Reblance Portfolio',
     href: '/tabel',
-  },
-  {
-    name: 'Blogs',
-    href: '#',
-  },
+  }
 ]
 
 
@@ -64,7 +63,7 @@ const menuItems = [
                 />
               </svg>
             </span>
-            <span className="font-bold">DevUI</span>
+            <span className="font-bold" >Crypto Heaven</span>
           </div>
           <div className="hidden lg:block">
             <ul className="inline-flex space-x-8">
@@ -81,12 +80,12 @@ const menuItems = [
             </ul>
           </div>
           <div className="hidden lg:block">
-            <button
-              type="button"
-              className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-            >
-              Button text
-            </button>
+            <Button  variant="contained" 
+            onClick={() => {
+              alert("multi users Still an experimental feature");
+            }}
+              >Log in</Button>
+            
           </div>
           <div className="lg:hidden">
             <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />
@@ -157,16 +156,15 @@ const menuItems = [
           <div className="flex flex-col justify-center px-4 py-12 md:py-16 lg:col-span-7 lg:gap-x-6 lg:px-6 lg:py-24 xl:col-span-6">
             <div className="mt-8 flex max-w-max items-center space-x-2 rounded-full bg-gray-100 p-1">
               <div className="rounded-full bg-white p-1 px-2">
-                <p className="text-sm font-medium">We&apos; hiring</p>
+                <p className="text-sm font-medium"></p>
               </div>
-              <p className="text-sm font-medium">Join our team &rarr;</p>
+              <p className="text-sm font-medium">Join our team of devs &rarr;</p>
             </div>
             <h1 className="mt-8 text-3xl font-bold tracking-tight text-black md:text-4xl lg:text-6xl">
               People who care about your growth
             </h1>
             <p className="mt-8 text-lg text-gray-700">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur modi blanditiis
-              dolores quasi eaque explicabo!
+              We are looking for devs who are passionate about their work and are willing to put in the hard work to make a difference in the world. We are looking for individuals who are committed to making a positive impact in their communities and the world at large.
             </p>
             <form action="" className="mt-8 flex items-start space-x-2">
               <div>
@@ -179,12 +177,14 @@ const menuItems = [
                 <p className="mt-2 text-sm text-gray-500">We care about your privacy</p>
               </div>
               <div>
-                <button
-                  type="button"
-                  className="rounded-md bg-black px-3 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                >
-                  Subscribe
-                </button>
+                <Button
+                onClick={() => {
+                  alert("We will mail u soon ");
+                }}
+                variant="contained"
+                  >
+                  Contibuite Now
+                </Button>
               </div>
             </form>
           </div>
@@ -219,8 +219,7 @@ const menuItems = [
             </div>
             <h3 className="mt-8 text-lg font-semibold text-black">Secured Payments</h3>
             <p className="mt-4 text-sm text-gray-600">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-              officia consequat duis enim velit mollit.
+              
             </p>
           </div>
           <div>
@@ -242,8 +241,7 @@ const menuItems = [
             </div>
             <h3 className="mt-8 text-lg font-semibold text-black">Fast & Easy to Load</h3>
             <p className="mt-4 text-sm text-gray-600">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-              officia consequat duis enim velit mollit.
+              
             </p>
           </div>
           <div>
@@ -265,8 +263,7 @@ const menuItems = [
             </div>
             <h3 className="mt-8 text-lg font-semibold text-black">Light & Dark Version</h3>
             <p className="mt-4 text-sm text-gray-600">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-              officia consequat duis enim velit mollit.
+              
             </p>
           </div>
           <div>
@@ -288,8 +285,7 @@ const menuItems = [
             </div>
             <h3 className="mt-8 text-lg font-semibold text-black">Filter Blocks</h3>
             <p className="mt-4 text-sm text-gray-600">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-              officia consequat duis enim velit mollit.
+              
             </p>
           </div>
         </div>
@@ -302,7 +298,7 @@ const menuItems = [
               Frequently Asked Questions
             </h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-gray-600 lg:mx-auto">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, assumenda
+              
             </p>
           </div>
           <div className="mx-auto mt-8 max-w-3xl space-y-4 md:mt-16">
@@ -317,8 +313,7 @@ const menuItems = [
               </button>
               <div className="px-4 pb-5 sm:px-6 sm:pb-6">
                 <p className="text-gray-500">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat aliquam adipisci
-                  iusto aperiam? Sint asperiores sequi nobis inventore ratione deleniti?
+                  For now its free and open source. We are working on a paid version soon.
                 </p>
               </div>
             </div>
@@ -327,7 +322,7 @@ const menuItems = [
                 key={i}
                 className="cursor-pointer rounded-md border border-gray-400 transition-all duration-200"
               >
-                <button
+                {/* <Button
                   type="button"
                   className="flex w-full items-start justify-between px-4 py-5 sm:p-6 md:items-center"
                 >
@@ -335,20 +330,20 @@ const menuItems = [
                     What is the difference between a free and paid account?
                   </span>
                   <ChevronDown className="hidden h-5 w-5 text-gray-500 md:block" />
-                </button>
+                </Button> */}
               </div>
             ))}
           </div>
           <p className="textbase mt-6 text-center text-gray-600">
             Can&apos;t find what you&apos;re looking for?{' '}
-            <a href="#" title="" className="font-semibold text-black hover:underline">
+            <a href="" title="" className="font-semibold text-black hover:underline">
               Contact our support
             </a>
           </p>
         </div>
       </section>
       {/* Pricing Section */}
-      <div className="mx-auto my-12 max-w-7xl md:my-24 lg:my-32">
+      {/* <div className="mx-auto my-12 max-w-7xl md:my-24 lg:my-32">
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-6">
           <div className="px-4 py-10 lg:col-span-5 lg:px-0">
             <span className="mb-8 inline-block rounded-full border p-1 px-3 text-xs font-semibold">
@@ -480,10 +475,10 @@ const menuItems = [
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* NewsLetter */}
-      <div className="mx-auto max-w-7xl bg-gray-50 px-2 py-10 lg:px-2">
+      {/* <div className="mx-auto max-w-7xl bg-gray-50 px-2 py-10 lg:px-2">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
           <div className="w-full md:w-2/3 lg:w-1/2">
             <h2 className="text-3xl font-bold text-black">Sign up for our weekly newsletter</h2>
@@ -530,7 +525,7 @@ const menuItems = [
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* footer */}
       <div className="mx-auto mt-12 max-w-7xl">
@@ -552,7 +547,7 @@ const menuItems = [
             </span>
             <div className="mt-4 grow md:ml-12 md:mt-0">
               <p className="text-base font-semibold text-gray-700">
-                © 2023 DevUI Component Library
+                © 2024 all rights reserved
               </p>
             </div>
           </div>
@@ -567,6 +562,7 @@ const menuItems = [
                 <li>Press Release</li>
               </ul>
             </div>
+           { /*
             <div className="mb-8 lg:mb-0">
               <p className="mb-6 text-lg font-semibold text-gray-700">Our Stores</p>
               <ul className="flex flex-col space-y-4 text-[14px] font-medium text-gray-500">
@@ -577,13 +573,14 @@ const menuItems = [
                 <li>Indiana</li>
               </ul>
             </div>
+            */}
             <div className="mb-8 lg:mb-0">
               <p className="mb-6 text-lg font-semibold text-gray-700">Services</p>
               <ul className="flex flex-col space-y-4 text-[14px] font-medium text-gray-500">
-                <li>UI / UX Design</li>
-                <li>App Development</li>
+                <li>Crypto Tracker</li>
+                <li>Crypto News</li>
                 <li>API reference</li>
-                <li>API status</li>
+                <li>Algo Trading</li>
                 <li>Documentation</li>
               </ul>
             </div>
