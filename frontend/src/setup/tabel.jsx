@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 // import Button from "@mui/material/Button";
 import ButtonUsage from "./test";
-import DashNav from '../components/dashNav'
+import Navbar from "../components/navbar";
 function Table({}) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/Cyrpto")
+      .get("http://localhost:5000/api/Crypto")
       .then((res) => {
         setData(res.data);
       })
@@ -19,7 +19,7 @@ function Table({}) {
 
   return (
     <>
-    <DashNav/>
+      <Navbar />
       <table className="w-full text-left text-sm text-gray-700 divide-y divide-gray-200">
         <thead className="bg-gray-50">
           <tr>

@@ -6,7 +6,7 @@ function DasTable({}) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/Cyrpto")
+      .get("http://localhost:5000/api/Crypto")
       .then((res) => {
         setData(res.data);
       })
@@ -14,6 +14,15 @@ function DasTable({}) {
         console.log("cant get data from backend api | mongodb"), err;
       });
   }, []);
+
+  // axios.get("http://localhost:5000/api/prices")
+  //   .then((res) => {
+  //     // console.log(res.data);
+      
+  //   })
+  //   .catch((err) => {
+  //     console.log("cant get data from backend api | coingecko"), err;
+  //   });
 
   return (
     <>

@@ -1,12 +1,15 @@
 
 
-import DashNav from '../components/dashNav'
-import DasTable from '../components/DashTable';
+import CardOne from '../components/card';
+import Navbar from '../components/navbar'
+// import DasTable from '../components/xd';
+import DasTable from '../components/Portfolio'
 
 function Dashboard() {
   return (
     <>
-      <DashNav/>
+      <Navbar/>
+      {/* <CardOne/> */}
       <DasTable/>
       </>
   );
