@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // components
 import  LandinngPageOne from "./setup/home"
 import Table from "./setup/tabel";
-import DataTable from "./setup/dataGrid";
 import Dashboard from "./setup/dashboard";
+import Rebalance from "./pages/rebalance";
 
 function App() {
   
@@ -19,7 +19,7 @@ function App() {
           <Route path="/" element={<LandinngPageOne />} />
           <Route path="/tabel" element={<Table />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/DataGrid" element={<DataTable />} />
+          <Route path="/rebalance" element={<Rebalance />} />
         
 
 

@@ -48,48 +48,13 @@ function DasTable({}) {
           </tr>
         </thead>
         <tbody>
-          {/* <tr>
-            <td>Bitcoin</td>
-            <td>{data.bitcoin.current_price}</td>
-            <td>{roundToNearestMillion(data.bitcoin.market_cap )}</td>
-            <td>{data.bitcoin.price_change_percentage_24h}</td>
-          </tr>
-          <tr>
-            <td>chainlink</td>
-            <td>{data.chainlink.current_price}</td>
-            <td>{roundToNearestMillion(data.chainlink.market_cap  )}</td>
-            <td>{data.chainlink.price_change_percentage_24h}</td>
-          </tr>
-          <tr>
-            <td>ethereum</td>
-            <td>{data.ethereum.current_price}</td>
-            <td>{roundToNearestMillion(data.ethereum.market_cap  )}</td>
-            <td>{data.ethereum.price_change_percentage_24h}</td>
-          </tr>
-          <tr>
-            <td>polkadot</td>
-            <td>{data.polkadot.current_price}</td>
-            <td>{roundToNearestMillion(data.polkadot.market_cap  )}</td>
-            <td>{data.polkadot.price_change_percentage_24h}</td>
-          </tr>
-          <tr>
-            <td>solana</td>
-            <td>{data.solana.current_price}</td>
-            <td>{roundToNearestMillion(data.solana.market_cap  )}</td>
-            <td>{data.solana.price_change_percentage_24h}</td>
-          </tr>
-          <tr>
-            <td>tether</td>
-            <td>{data.tether.current_price}</td>
-            <td>{roundToNearestMillion(data.tether.market_cap  )}</td>
-            <td>{data.tether.price_change_percentage_24h}</td>
-          </tr> */}
+          
           {Object.entries(data).map(([key, value]) => (
   <tr key={key}>
     <td>{key}</td>
     <td>{value.current_price}</td>
     <td>{roundToNearestMillion(value.market_cap)}</td>
-    <td>{value.price_change_percentage_24h}</td>
+    <td>{value.price_change_percentage_24h.toFixed(2)}</td>
   </tr>
 ))}
           
@@ -147,4 +112,43 @@ export default DasTable;
             <td>{data[i].name}</td>
             <td>{data[i].current_price}</td>
             <td>{data[i].market_cap}</td>
+          </tr> */}
+
+
+// working code 
+{/* <tr>
+            <td>Bitcoin</td>
+            <td>{data.bitcoin.current_price}</td>
+            <td>{roundToNearestMillion(data.bitcoin.market_cap )}</td>
+            <td>{data.bitcoin.price_change_percentage_24h}</td>
+          </tr>
+          <tr>
+            <td>chainlink</td>
+            <td>{data.chainlink.current_price}</td>
+            <td>{roundToNearestMillion(data.chainlink.market_cap  )}</td>
+            <td>{data.chainlink.price_change_percentage_24h}</td>
+          </tr>
+          <tr>
+            <td>ethereum</td>
+            <td>{data.ethereum.current_price}</td>
+            <td>{roundToNearestMillion(data.ethereum.market_cap  )}</td>
+            <td>{data.ethereum.price_change_percentage_24h}</td>
+          </tr>
+          <tr>
+            <td>polkadot</td>
+            <td>{data.polkadot.current_price}</td>
+            <td>{roundToNearestMillion(data.polkadot.market_cap  )}</td>
+            <td>{data.polkadot.price_change_percentage_24h}</td>
+          </tr>
+          <tr>
+            <td>solana</td>
+            <td>{data.solana.current_price}</td>
+            <td>{roundToNearestMillion(data.solana.market_cap  )}</td>
+            <td>{data.solana.price_change_percentage_24h}</td>
+          </tr>
+          <tr>
+            <td>tether</td>
+            <td>{data.tether.current_price}</td>
+            <td>{roundToNearestMillion(data.tether.market_cap  )}</td>
+            <td>{data.tether.price_change_percentage_24h}</td>
           </tr> */}
