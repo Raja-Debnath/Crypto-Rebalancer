@@ -128,7 +128,7 @@ const fetchCryptoData = async () => {
             throw new Error('Failed to fetch data');
         }
         const data = await response.json();
-        // 
+        
         let counter = 1;
 
 function assignId(obj) {

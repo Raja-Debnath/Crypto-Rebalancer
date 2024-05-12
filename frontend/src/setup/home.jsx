@@ -9,12 +9,7 @@ import Faq from "../components/faq";
 import Button from "@mui/material/Button";
 import Navbar from "../components/navbar";
 import React from "react";
-
-
-
-
 function LandinngPageOne() {
-  
   return (
     <>
       <div className="w-full">
@@ -43,24 +38,27 @@ function LandinngPageOne() {
               </p>
               <form action="" className="mt-8 flex items-start space-x-2">
                 <div>
-                  <input
+                  {/* <input
                     className="flex w-full rounded-md border border-black/30 bg-transparent px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                     type="email"
                     placeholder="Enter your email"
                     id="email"
-                  ></input>
-                  <p className="mt-2 text-sm text-gray-500">
+                  ></input> */}
+                  {/* <p className="mt-2 text-sm text-gray-500">
                     We care about your privacy
-                  </p>
+                  </p> */}
                 </div>
                 <div>
                   <Button
                     onClick={() => {
-                      alert("We will mail u soon ");
+                      window.open(
+                        "https://github.com/Raja-Debnath/Crypto-Rebalancer",
+                        "_blank"
+                      );
                     }}
                     variant="contained"
                   >
-                    Contibuite Now
+                    Contribute Now
                   </Button>
                 </div>
               </form>
@@ -352,8 +350,8 @@ function LandinngPageOne() {
           </div>
         </div>
       </div> */}
-      
-      {/*
+
+        {/*
         footer 
         <div className="mx-auto mt-12 max-w-7xl">
           <footer className="px-4 py-10">
@@ -443,7 +441,6 @@ function LandinngPageOne() {
           </footer>
         </div>{" "}
     */}
-        
       </div>
     </>
   );
