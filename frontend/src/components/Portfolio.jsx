@@ -1,44 +1,41 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
 function DasTable({}) {
   const [data, setData] = useState([]);
-
   useEffect(() => {
     axios
       .get("http://localhost:5000/api/prices")
-      .then((res) => { 
+      .then((res) => {
         setData(res.data);
       })
       .catch((err) => {
         console.log("cant get data from backend api | coingecko"), err;
       });
   }, []);
-
   // console.log(data.bitcoin.market_cap );
   // function numberWithCommas(x) {
   //   // Function to format numbers with commas (same as previous explanation)
   //   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   // }
   function roundToNearestMillion(num) {
-    return Math.round(num / 1e6)  // Divide by 1e6 and round to nearest million
+    return Math.round(num / 1e6); // Divide by 1e6 and round to nearest million
   }
-// console.log(numberWithCommas(data.bitcoin.market_cap / 1e6 + "M"));
-// console.log(roundToNearestMillion(data.bitcoin.market_cap / 1e6));
-
+  // console.log(numberWithCommas(data.bitcoin.market_cap / 1e6 + "M"));
+  // console.log(roundToNearestMillion(data.bitcoin.market_cap / 1e6));
 
   // console.log( data.bitcoin.current_price);
 
-  
   // for (let i in data) {
   //   // console.log(data.bitcoin.current_price);
   //   // console.log(data[i].current_price);
   //   // console.log(data[i].market_cap);
   // }
-
   return (
     <>
-      <table className="w-full text-left text-sm text-gray-700 divide-y divide-gray-200">
+      <table
+        className="w-full text-left text-sm text-gray-700 divide-y divide-gray-200"
+        style={{ width: "80%", margin: "40px auto" }}
+      >
         <thead className="bg-gray-50">
           <tr>
             <th>Name</th>
@@ -48,24 +45,19 @@ function DasTable({}) {
           </tr>
         </thead>
         <tbody>
-          
           {Object.entries(data).map(([key, value]) => (
-  <tr key={key}>
-    <td>{key}</td>
-    <td>{value.current_price}</td>
-    <td>{roundToNearestMillion(value.market_cap)}</td>
-    <td>{value.price_change_percentage_24h.toFixed(2)}</td>
-  </tr>
-))}
-          
-          
-          
+            <tr key={key}>
+              <td>{key}</td>
+              <td>{value.current_price}</td>
+              <td>{roundToNearestMillion(value.market_cap)}</td>
+              <td>{value.price_change_percentage_24h.toFixed(2)}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </>
   );
 }
-
 export default DasTable;
 
 {
@@ -99,24 +91,32 @@ export default DasTable;
 </tbody>
 */
 }
-  
-          {/* {data.map((data) => (
+
+{
+  /* {data.map((data) => (
             console.log(data),
             <tr key={data.id}>
-              {/* <td>{data[1]}</td> */}
-              {/* {/* <td>{data.current_price}</td> */}
-             {/* <td>{data.market_cap}</td> 
+              {/* <td>{data[1]}</td> */
+}
+{
+  /* {/* <td>{data.current_price}</td> */
+}
+{
+  /* <td>{data.market_cap}</td> 
             </tr>
-          ))} */}
-          {/* <tr key={i}>
+          ))} */
+}
+{
+  /* <tr key={i}>
             <td>{data[i].name}</td>
             <td>{data[i].current_price}</td>
             <td>{data[i].market_cap}</td>
-          </tr> */}
+          </tr> */
+}
 
-
-// working code 
-{/* <tr>
+// working code
+{
+  /* <tr>
             <td>Bitcoin</td>
             <td>{data.bitcoin.current_price}</td>
             <td>{roundToNearestMillion(data.bitcoin.market_cap )}</td>
@@ -151,4 +151,5 @@ export default DasTable;
             <td>{data.tether.current_price}</td>
             <td>{roundToNearestMillion(data.tether.market_cap  )}</td>
             <td>{data.tether.price_change_percentage_24h}</td>
-          </tr> */}
+          </tr> */
+}

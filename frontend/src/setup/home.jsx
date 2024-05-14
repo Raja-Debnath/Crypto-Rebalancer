@@ -8,6 +8,7 @@
 import Faq from "../components/faq";
 import Button from "@mui/material/Button";
 import Navbar from "../components/navbar";
+import FooterThree from "../components/Footer";
 import React from "react";
 function LandinngPageOne() {
   return (
@@ -351,9 +352,8 @@ function LandinngPageOne() {
         </div>
       </div> */}
 
-        {/*
-        footer 
-        <div className="mx-auto mt-12 max-w-7xl">
+        {/* footer  */}
+        {/* <div className="mx-auto mt-12 max-w-7xl">
           <footer className="px-4 py-10">
             <div className="flex flex-col md:flex-row md:items-center">
               <span>
@@ -441,6 +441,7 @@ function LandinngPageOne() {
           </footer>
         </div>{" "}
     */}
+        <FooterThree />
       </div>
     </>
   );

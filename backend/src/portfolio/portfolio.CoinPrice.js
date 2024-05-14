@@ -181,5 +181,5 @@ fetchCryptoData()
         printCryptoData(data);
     });
 
-export { fetchCryptoData };
+export default fetchCryptoData 
 // export default getCoinPricesInr 

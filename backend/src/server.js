@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import Users from "./models/models.user.js";
 import CryptoPrice from "./models/models.Portfolio.js";
 import { getCoinPrices } from "./utils/utils.coingeckoApi.js";
+import fetchCryptoData from "./portfolio/portfolio.CoinPrice.js";
 dotenv.config({
     path: "./.env",
 });
@@ -33,7 +34,16 @@ app.get("/api/Crypto", async (req, res) => {
         res.status(500).json({ message: "Server error" });
     }
 });
-
+app.get('/api/arr', async (req, res) => {
+    try {
+      const prices = await fetchCryptoData();
+      res.json(prices);
+    }
+    catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Server error' });
+    }
+  })
 app.listen(5000, () => {
     console.log(`Server listening on port 5000`);
 });
@@ -53,16 +63,7 @@ export default app;
 
 // CURRENCY API
 
-// app.get('/api/arr', async (req, res) => {
-//   try {
-//     const prices = await fetchCryptoData();
-//     res.json(prices);
-//   }
-//   catch (error) {
-//     console.error(error);
-//     res.status(500).json({ message: 'Server error' });
-//   }
-// })
+
 
 // Error handling middleware
 

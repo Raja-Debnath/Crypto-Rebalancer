@@ -3,6 +3,7 @@ import axios from "axios";
 // import Button from "@mui/material/Button";
 import ButtonUsage from "./test";
 import Navbar from "../components/navbar";
+import FooterThree from "../components/Footer";
 function Table({}) {
   const [data, setData] = useState([]);
   const [liveData, setLiveData] = useState([]);
@@ -50,7 +51,9 @@ function Table({}) {
 
     return val.toFixed(2);
   }
-
+console.log(calculatePercentageChange(
+  liveData?.bitcoin?.current_price,
+  data[0]?.current_price))
   // console.log(liveData);
   // const btcPercentageChange = calculatePercentageChange(liveData.bitcoin.current_price, data[0].current_price);
   // const chainlinkPercentageChange = calculatePercentageChange(liveData.chainlink.current_price, data[1].current_price);
@@ -71,7 +74,10 @@ function Table({}) {
           <h2>Your Cryptos</h2>
         </b>
       </center>
-      <table className="w-full text-left text-sm text-gray-700 divide-y divide-gray-200">
+      <table
+        className="w-full text-left text-sm text-gray-700 divide-y divide-gray-200"
+        style={{ width: "80%", margin: "0px auto" }}
+      >
         <thead className="bg-gray-50">
           <tr>
             <th>Name</th>
@@ -159,7 +165,10 @@ function Table({}) {
         </b>
       </center>
 
-      <table className="w-full text-left text-sm text-gray-700 divide-y divide-gray-200">
+      <table
+        className="w-full text-left text-sm text-gray-700 divide-y divide-gray-200 "
+        style={{ width: "80%", margin: "0px auto" }}
+      >
         <thead className="bg-gray-50">
           <tr>
             <th>Name</th>
@@ -183,6 +192,7 @@ function Table({}) {
       <br />
       <br />
       <ButtonUsage />
+      <FooterThree />
     </>
   );
 }
